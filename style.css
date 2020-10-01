@@ -8,7 +8,10 @@ p {
     font-family: 'Kufam', cursive;
     text-align: justify;
 }
-
+hr {
+    background-color: grey;
+    width: 70%;
+}
 .name {
     display: flex;
     justify-content: center;
@@ -20,7 +23,7 @@ p {
 }
 
 #description {
-    color: #40a8c4; height: ;
+    color: #40a8c4;
 }
 
 .navbar {
@@ -105,10 +108,7 @@ footer div form > * {
     margin-right: 50px;
 }
 
-hr {
-    background-color: grey;
-    width: 70%;
-}
+
 
 input[type=text], input[type=email], input[type=submit] {
     padding: 12px 20px;
@@ -172,16 +172,13 @@ textarea {
     flex-wrap: wrap;
 }
 
-.timeline-item col {
+.timeline-item .col {
     width: 50%;
 
 }
 
 .timeline-item img {
     width: 200px;
-    /* position: absolute; */
-    /* top: 30px;
-    right: 10px; */
 }
 
 .timeline-techstack {
@@ -224,10 +221,8 @@ textarea {
 }
 
 .timeline-separator {
-    position: absolute;
-    width: 400px;
-    bottom: 0px;
-    left: 40px;
+    margin: 0px;
+    width: 100%;
 }
 
 .timeline-buttons {
@@ -247,67 +242,6 @@ textarea {
     top: 100px;
     left: -150px;
 }
-
-
-
-/* SIDE DECORATORS */
-
-
-
-.decorator {
-    position: absolute;
-    top: 100px;
-    width: 100px;
-    height: 100px;
-}
-
-.decorator div {
-    margin-bottom: 3px;
-}
-
-.dl {
-    right: 55vw;
-}
-
-.dr {
-    right: -20vw;
-}
-
-
-.d1, .d2, .d3{
-    width: 30px;
-    height: 30px;
-    background-color: #a6a6a4;
-}
-
-.dl .d1 {
-    margin-left: 50px;
-}
-
-.dl .d2 {
-    margin-left: 10px;
-}
-
-.dl .d3 {
-    margin-left: 60px;
-}
-
-
-.dr .d1 {
-    margin-left: 20px;
-}
-
-.dr .d2 {
-    margin-left: 60px;
-}
-
-.dr .d3 {
-    margin-left: 10px;
-}
-
-
-
-
 
 
 ::-webkit-scrollbar{
@@ -339,37 +273,37 @@ textarea {
 
 /* Custom Responsive CSS */
 
+
+
+
 @media  (max-width: 800px) {
-    header img{
-        opacity: 0;
-    }
 
     .buttons {
         width: 50%;
         display: flex;
         flex-wrap: wrap;
-    }
-
-    
+    }    
 
     header {
         height: auto;
     }
 
-    header .row .container{
-        height: 50vh;
+    header img{
+        width: 100px;
+        position: absolute;
+        left: 450px;
+        top: 150px;
     }
 
-    .decorator, .date {
-        left: -9999px;
+    header .row .header-content{
+        height: 200px;
     }
 
     .timeline-item {
-        width: 90vw !important;
-        height: 63vh !important;
+        width: auto;
+        height: auto;        
         border-left: 0px solid #004ffc;
         border-top: 10px solid #004ffc;
-
     }
 
     .timeline-item .col, .content {
@@ -379,6 +313,11 @@ textarea {
         justify-content: center;
         align-items: center;
     }
+
+    .col {
+        flex-basis: auto;
+    }
+
 
     .point {
         background-color: #252525;
@@ -391,14 +330,9 @@ textarea {
         left: -10px;
     }
 
-    .timeline-item:first-child {
-        border-radius:0;
+    .last-item {
+        border-radius: 0 0 50px 50px !important;
     }
-    
-    .timeline-item:last-child {
-        border-radius: 0;
-    }
-
 
     hr {
         width: 0vw !important;
@@ -407,10 +341,6 @@ textarea {
     ul {
         margin: 0px !important;
         padding: 0px !important;
-    }
-
-    .timeline-item:last-child {
-        border-radius: 0 0 50px 50px;
     }
 
     .timeline-item img {
@@ -425,6 +355,39 @@ textarea {
         margin-top: 15px;
         margin-bottom: 15px;
 
+    }
+
+    .date {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    .pr {
+        padding-bottom: 10px;
+        border-bottom: 1px solid grey;
+    }
+
+    p {
+        margin-top: 20px;
+    }
+
+    h5 strong{
+        position: absolute;
+        margin-bottom: 20px;
+        right: 10px;
+    }
+
+}
+
+
+@media only screen and (max-width: 750px) {
+
+    header img{
+        width: 100px;
+        position: absolute;
+        top: 330px;
+        left: 40%;
     }
 
 }
